@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CiberHub — Marketplace de ciberseguridad para PYMEs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="index.js"></script>
+</head>
+
+<body
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+  <div class="nav">
+
+    <div class="brand">
+      <span class="brand-mark"></span>
+      CiberHub
+    </div>
+
+    <nav class="navlinks" aria-label="Navegación principal">
+
+      <a href="#catalogo">
+        Catálogo
+      </a>
+
+      <a href="#video">
+        Video
+      </a>
+
+      <a href="#confianza">
+        Cómo verificamos
+      </a>
+
+      <a href="#footer">
+        Para proveedores
+      </a>
+
+    </nav>
+
+    <button
+      class="cart-btn"
+      id="cart-btn"
+      type="button"
+      aria-label="Abrir carrito de compras"
+      title="Abrir carrito"
+    >
+
+      Carrito
+
+      <span
+        id="cart-count"
+        aria-live="polite"
+      >
+        0
+      </span>
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+  <div class="hero-grid">
+
+    <div>
+
+      <div class="eyebrow-line">
+
+        <span
+          class="pulse"
+          aria-hidden="true"
+        ></span>
+
+        Proveedores verificados activos: 14
+
+      </div>
+
+      <h1>
+        Servicios de ciberseguridad para tu PYME,
+        sin contratar un equipo de TI.
+      </h1>
+
+      <p class="lead">
+        Compara y contrata auditorías, monitoreo,
+        capacitación y protección de datos de
+        proveedores certificados en Panamá —
+        todo desde un mismo lugar, con pago local.
+      </p>
+
+      <div class="hero-ctas">
+
+        <button
+          class="btn-primary"
+          type="button"
+          aria-label="Explorar catálogo de servicios"
+          onclick="document.getElementById('catalogo').scrollIntoView()"
+        >
+          Explorar catálogo
+        </button>
+
+        <button
+          class="btn-ghost"
+          id="provider-btn"
+          type="button"
+          aria-label="Abrir formulario para registrarse como proveedor"
+        >
+          Soy proveedor
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- TERMINAL ORIGINAL -->
+
+    <div class="terminal">
+
+      <div class="terminal-bar">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+      </div>
+
+      <div class="terminal-body">
+
+        <p class="line">
+          $ ciberhub verificar --pyme "Panadería Aguadulce"
+        </p>
+
+        <p class="line ok">
+          ✓ certificado_ssl ................ activo
+        </p>
+
+        <p class="line ok">
+          ✓ backup_automatico .............. configurado
+        </p>
+
+        <p
+          class="line"
+          style="color:var(--amber);"
+        >
+          △ capacitación_phishing .......... pendiente
+        </p>
+
+        <p class="line ok">
+          ✓ firewall_perimetral ............ activo
+        </p>
+
+        <p class="line">
+          3 de 4 controles cumplidos<span class="caret"></span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORÍAS
+========================================= -->
+
+<div class="cats">
+
+  <div class="cats-row">
+
+    <button
+      class="cat-btn active"
+      data-cat="todos"
+      type="button"
+      aria-label="Mostrar todos los servicios"
+      aria-pressed="true"
+    >
+      Todos
+    </button>
+
+    <button
+      class="cat-btn"
+      data-cat="auditoria"
+      type="button"
+      aria-label="Mostrar servicios de auditoría"
+      aria-pressed="false"
+    >
+      Auditoría
+    </button>
+
+    <button
+      class="cat-btn"
+      data-cat="monitoreo"
+      type="button"
+      aria-label="Mostrar servicios de monitoreo"
+      aria-pressed="false"
+    >
+      Monitoreo
+    </button>
+
+    <button
+      class="cat-btn"
+      data-cat="capacitacion"
+      type="button"
+      aria-label="Mostrar servicios de capacitación"
+      aria-pressed="false"
+    >
+      Capacitación
+    </button>
+
+    <button
+      class="cat-btn"
+      data-cat="infraestructura"
+      type="button"
+      aria-label="Mostrar servicios de infraestructura"
+      aria-pressed="false"
+    >
+      Infraestructura
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================
+     CATÁLOGO
+========================================= -->
+
+<section
+  class="section"
+  id="catalogo"
+>
+
+  <div class="section-head">
+
+    <h2>
+      Catálogo de servicios
+    </h2>
+
+    <span
+      id="results-count"
+      aria-live="polite"
+    >
+      6 servicios de 4 proveedores
+    </span>
+
+  </div>
+
+
+  <!-- BUSCADOR Y ORDEN -->
+
+  <div class="toolbar">
+
+    <div class="search-box">
+
+      <svg
+        class="search-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+
+        <circle
+          cx="11"
+          cy="11"
+          r="7"
+        ></circle>
+
+        <line
+          x1="21"
+          y1="21"
+          x2="16.65"
+          y2="16.65"
+        ></line>
+
+      </svg>
+
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar servicio (ej. phishing, backup, SSL)..."
+        aria-label="Buscar servicios por palabra clave"
+      >
+
+    </div>
+
+
+    <select
+      class="sort-select"
+      id="sort-select"
+      aria-label="Ordenar servicios"
+    >
+
+      <option value="relevancia">
+        Relevancia
+      </option>
+
+      <option value="precio-asc">
+        Menor precio
+      </option>
+
+      <option value="precio-desc">
+        Mayor precio
+      </option>
+
+      <option value="calificacion">
+        Mejor calificado
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="grid"
+    id="grid"
+    aria-live="polite"
+  ></div>
+
+
+  <div
+    class="empty-state"
+    id="empty-state"
+    style="display:none;"
+    role="status"
+  >
+
+    <strong>
+      No hay servicios en esta categoría todavía.
+    </strong>
+
+    Prueba con otra categoría o borra la búsqueda.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     VIDEO
+========================================= -->
+
+<section
+  class="section video-section"
+  id="video"
+>
+
+  <div class="section-head">
+
+    <h2>
+      Cómo funciona CiberHub
+    </h2>
+
+    <span>
+      Video explicativo
+    </span>
+
+  </div>
+
+
+  <div class="video-wrap">
+
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+      title="Cómo funciona CiberHub"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+  </div>
+
+
+  <p class="video-caption">
+    Video de 1–2 minutos mostrando el catálogo,
+    el filtro por categoría y el flujo de agregar
+    un servicio al carrito.
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     CONFIANZA
+========================================= -->
+
+<section
+  class="trust"
+  id="confianza"
+>
+
+  <div class="trust-row">
+
+    <div class="trust-item">
+      🛡️ Proveedores verificados manualmente
+    </div>
+
+    <div class="trust-item">
+      💳 Yappy · Tarjeta · Transferencia
+    </div>
+
+    <div class="trust-item">
+      🧾 Precios incluyen 7% ITBMS
+    </div>
+
+    <div class="trust-item">
+      📄 Contrato de servicio digital incluido
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer id="footer">
+
+  <div class="foot-row">
+
+    <div>
+      CiberHub — demo académica,
+      Trabajo Individual 3, Tienda Electrónica.
+    </div>
+
+    <div>
+      Universidad de Panamá ·
+      Centro Regional Universitario de Coclé
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================
+     MODAL CARRITO
+========================================= -->
+
+<div
+  class="modal-overlay"
+  id="cart-overlay"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cart-title"
+  >
+
+    <div class="modal-head">
+
+      <h3 id="cart-title">
+        Tu carrito
+      </h3>
+
+      <button
+        class="modal-close"
+        id="cart-close"
+        type="button"
+        aria-label="Cerrar carrito"
+        title="Cerrar carrito"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cart-body"></div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================
+     MODAL PERFIL PROVEEDOR
+========================================= -->
+
+<div
+  class="modal-overlay center"
+  id="vendor-overlay"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="vendor-title"
+  >
+
+    <div class="modal-head">
+
+      <h3 id="vendor-title">
+        Proveedor
+      </h3>
+
+      <button
+        class="modal-close"
+        id="vendor-close"
+        type="button"
+        aria-label="Cerrar perfil de proveedor"
+        title="Cerrar perfil"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div id="vendor-body"></div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================
+     MODAL SOY PROVEEDOR
+========================================= -->
+
+<div
+  class="modal-overlay center"
+  id="provider-overlay"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="provider-title"
+  >
+
+    <div class="modal-head">
+
+      <h3 id="provider-title">
+        Únete como proveedor
+      </h3>
+
+      <button
+        class="modal-close"
+        id="provider-close"
+        type="button"
+        aria-label="Cerrar formulario de proveedor"
+        title="Cerrar formulario"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <form id="provider-form">
+
+
+      <div class="form-field">
+
+        <label for="pf-name">
+          Nombre del negocio
+        </label>
+
+        <input
+          type="text"
+          id="pf-name"
+          name="nombre_negocio"
+          required
+          minlength="2"
+          autocomplete="organization"
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label for="pf-services">
+          Servicios que ofrece
+        </label>
+
+        <textarea
+          id="pf-services"
+          name="servicios"
+          rows="3"
+          required
+          minlength="3"
+          placeholder="Ej. auditorías, monitoreo, capacitación..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label for="pf-contact">
+          Correo o teléfono de contacto
+        </label>
+
+        <input
+          type="text"
+          id="pf-contact"
+          name="contacto"
+          required
+          minlength="3"
+          autocomplete="email"
+          placeholder="correo@ejemplo.com / 6000-0000"
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn-primary"
+        style="width:100%;"
+        aria-label="Enviar solicitud para ser proveedor"
+      >
+        Enviar solicitud
+      </button>
+
+
+      <div
+        class="form-success"
+        id="pf-success"
+        style="display:none;"
+        role="status"
+        aria-live="polite"
+      >
+        ✓ Solicitud enviada. Te contactaremos pronto.
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
