@@ -1,1 +1,1 @@
-![alt text](<Captura de pantalla 2026-09-11 103416.png>)
+![Uploading Captura de pantalla 2026-09-25 112316.png…]()
