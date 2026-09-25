@@ -1,669 +1,742 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CiberHub — Marketplace de ciberseguridad para PYMEs</title>
+  <title>CiberHub | Ciberseguridad para tu empresa</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="index.css">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<script src="index.js"></script>
+  <meta
+    name="description"
+    content="CiberHub conecta empresas con proveedores de servicios de ciberseguridad en Panamá."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body
+<body>
 
+  <!-- HEADER -->
+  <header>
 
-<!-- =========================================
-     HEADER
-========================================= -->
+    <div class="nav">
 
-<header>
-
-  <div class="nav">
-
-    <div class="brand">
-      <span class="brand-mark"></span>
-      CiberHub
-    </div>
-
-    <nav class="navlinks" aria-label="Navegación principal">
-
-      <a href="#catalogo">
-        Catálogo
-      </a>
-
-      <a href="#video">
-        Video
-      </a>
-
-      <a href="#confianza">
-        Cómo verificamos
-      </a>
-
-      <a href="#footer">
-        Para proveedores
-      </a>
-
-    </nav>
-
-    <button
-      class="cart-btn"
-      id="cart-btn"
-      type="button"
-      aria-label="Abrir carrito de compras"
-      title="Abrir carrito"
-    >
-
-      Carrito
-
-      <span
-        id="cart-count"
-        aria-live="polite"
+      <a
+        href="#inicio"
+        class="brand"
+        aria-label="CiberHub inicio"
       >
-        0
-      </span>
+        <span class="brand-mark"></span>
+        CiberHub
+      </a>
 
-    </button>
+      <nav
+        class="navlinks"
+        aria-label="Navegación principal"
+      >
 
-  </div>
+        <a href="#inicio">Inicio</a>
 
-</header>
+        <a href="#categorias">Categorías</a>
 
+        <a href="#servicios">Servicios</a>
 
-<!-- =========================================
-     HERO
-========================================= -->
+        <a href="#destacados">Destacados</a>
 
-<section class="hero">
+        <a href="#contacto">Contacto</a>
 
-  <div class="hero-grid">
+      </nav>
 
-    <div>
+      <div class="nav-actions">
 
-      <div class="eyebrow-line">
+        <button
+          class="login-btn"
+          type="button"
+          aria-label="Iniciar sesión"
+        >
+          Iniciar sesión
+        </button>
 
-        <span
-          class="pulse"
-          aria-hidden="true"
-        ></span>
-
-        Proveedores verificados activos: 14
+        <button
+          class="primary register-btn"
+          type="button"
+          aria-label="Registrarse"
+        >
+          Registrarse
+        </button>
 
       </div>
 
-      <h1>
-        Servicios de ciberseguridad para tu PYME,
-        sin contratar un equipo de TI.
-      </h1>
+    </div>
 
-      <p class="lead">
-        Compara y contrata auditorías, monitoreo,
-        capacitación y protección de datos de
-        proveedores certificados en Panamá —
-        todo desde un mismo lugar, con pago local.
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section
+      class="hero"
+      id="inicio"
+    >
+
+      <div class="hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+
+            <span
+              class="pulse"
+              aria-hidden="true"
+            ></span>
+
+            PLATAFORMA DE CIBERSEGURIDAD
+
+          </div>
+
+          <h1>
+
+            Protege tu empresa
+            con los mejores
+            <span>profesionales.</span>
+
+          </h1>
+
+          <p class="hero-text">
+
+            Encuentra servicios de ciberseguridad,
+            compara proveedores verificados y conecta
+            directamente con especialistas para proteger
+            tu negocio.
+
+          </p>
+
+          <div class="hero-buttons">
+
+            <button
+              class="primary"
+              type="button"
+              id="explore-btn"
+            >
+              Explorar servicios
+            </button>
+
+            <button
+              class="secondary"
+              type="button"
+              id="provider-btn"
+            >
+              Soy proveedor
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- TERMINAL -->
+        <div class="terminal">
+
+          <div class="terminal-bar">
+
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+
+          </div>
+
+          <div class="terminal-body">
+
+            <p class="terminal-line">
+              $ ciberhub security --scan empresa
+            </p>
+
+            <p class="terminal-line terminal-ok">
+              ✓ firewall ................ protegido
+            </p>
+
+            <p class="terminal-line terminal-ok">
+              ✓ certificados ........... activos
+            </p>
+
+            <p class="terminal-line terminal-ok">
+              ✓ backup .................. configurado
+            </p>
+
+            <p class="terminal-line terminal-warning">
+              △ phishing ................. atención requerida
+            </p>
+
+            <p class="terminal-line">
+              estado: análisis completado
+              <span class="cursor"></span>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section
+      class="categories"
+      id="categorias"
+    >
+
+      <div class="categories-inner">
+
+        <article class="category">
+
+          <div class="category-icon">
+            🛡️
+          </div>
+
+          <h3>
+            Auditoría
+          </h3>
+
+          <p>
+            Evalúa vulnerabilidades y riesgos de tu empresa.
+          </p>
+
+        </article>
+
+
+        <article class="category">
+
+          <div class="category-icon">
+            📡
+          </div>
+
+          <h3>
+            Monitoreo
+          </h3>
+
+          <p>
+            Vigila tu infraestructura y detecta amenazas.
+          </p>
+
+        </article>
+
+
+        <article class="category">
+
+          <div class="category-icon">
+            🎓
+          </div>
+
+          <h3>
+            Capacitación
+          </h3>
+
+          <p>
+            Prepara a tu equipo frente a ataques y phishing.
+          </p>
+
+        </article>
+
+
+        <article class="category">
+
+          <div class="category-icon">
+            ⚙️
+          </div>
+
+          <h3>
+            Infraestructura
+          </h3>
+
+          <p>
+            Protege servidores, webs, redes y sistemas.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section
+      class="section"
+      id="servicios"
+    >
+
+      <h2 class="section-title">
+        Servicios de ciberseguridad
+      </h2>
+
+      <p class="section-description">
+
+        Encuentra especialistas para las necesidades
+        de seguridad de tu empresa.
+
       </p>
 
-      <div class="hero-ctas">
 
-        <button
-          class="btn-primary"
-          type="button"
-          aria-label="Explorar catálogo de servicios"
-          onclick="document.getElementById('catalogo').scrollIntoView()"
+      <div class="service-grid">
+
+        <article class="service">
+
+          <span class="service-tag">
+            AUDITORÍA
+          </span>
+
+          <h3>
+            Auditoría de vulnerabilidades
+          </h3>
+
+          <p>
+            Identifica vulnerabilidades y riesgos
+            en la infraestructura de tu empresa.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              Desde $180
+            </span>
+
+            <a
+              href="#"
+              class="service-link"
+            >
+              Ver servicio →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="service">
+
+          <span class="service-tag">
+            MONITOREO
+          </span>
+
+          <h3>
+            Monitoreo perimetral 24/7
+          </h3>
+
+          <p>
+            Recibe alertas ante comportamientos
+            sospechosos e intentos de intrusión.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              Desde $65/mes
+            </span>
+
+            <a
+              href="#"
+              class="service-link"
+            >
+              Ver servicio →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="service">
+
+          <span class="service-tag">
+            CAPACITACIÓN
+          </span>
+
+          <h3>
+            Taller anti-phishing
+          </h3>
+
+          <p>
+            Capacita a tus colaboradores para detectar
+            correos y amenazas fraudulentas.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              Desde $95
+            </span>
+
+            <a
+              href="#"
+              class="service-link"
+            >
+              Ver servicio →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- DESTACADOS -->
+    <section
+      class="featured"
+      id="destacados"
+    >
+
+      <div class="featured-grid">
+
+        <article class="featured-card">
+
+          <span class="featured-label">
+            PROVEEDORES DESTACADOS
+          </span>
+
+          <h3>
+            Encuentra profesionales verificados.
+          </h3>
+
+          <p>
+            Descubre proveedores especializados,
+            revisa sus servicios y conoce su experiencia
+            antes de contactarlos.
+          </p>
+
+        </article>
+
+
+        <article class="featured-card">
+
+          <span class="featured-label">
+            SERVICIOS DESTACADOS
+          </span>
+
+          <h3>
+            Soluciones para cada necesidad.
+          </h3>
+
+          <p>
+            Desde auditorías hasta monitoreo y capacitación,
+            encuentra la solución que necesita tu empresa.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- POR QUÉ CIBERHUB -->
+    <section class="section">
+
+      <h2 class="section-title">
+        ¿Por qué CiberHub?
+      </h2>
+
+      <p class="section-description">
+        Una plataforma diseñada para conectar empresas
+        con especialistas de ciberseguridad.
+      </p>
+
+
+      <div class="service-grid">
+
+        <article class="service">
+
+          <h3>
+            🔐 Proveedores verificados
+          </h3>
+
+          <p>
+            Los proveedores pueden pasar por un proceso
+            de revisión antes de aparecer como verificados.
+          </p>
+
+        </article>
+
+
+        <article class="service">
+
+          <h3>
+            ⚡ Contacto directo
+          </h3>
+
+          <p>
+            Conecta directamente con el profesional
+            que puede ayudarte.
+          </p>
+
+        </article>
+
+
+        <article class="service">
+
+          <h3>
+            📊 Más información
+          </h3>
+
+          <p>
+            Consulta servicios, experiencia, calificaciones
+            y contenido promocional del proveedor.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- REDES SOCIALES -->
+    <section
+      class="social-section"
+      id="contacto"
+    >
+
+      <h2>
+        Síguenos en nuestras redes
+      </h2>
+
+      <p>
+        Mantente informado sobre ciberseguridad,
+        consejos y novedades de CiberHub.
+      </p>
+
+
+      <div class="socials">
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="Instagram de CiberHub"
+          title="Instagram"
         >
-          Explorar catálogo
-        </button>
+          ◎
+        </a>
 
-        <button
-          class="btn-ghost"
-          id="provider-btn"
-          type="button"
-          aria-label="Abrir formulario para registrarse como proveedor"
+
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="Facebook de CiberHub"
+          title="Facebook"
+        >
+          f
+        </a>
+
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="TikTok de CiberHub"
+          title="TikTok"
+        >
+          ♪
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="LinkedIn de CiberHub"
+          title="LinkedIn"
+        >
+          in
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="YouTube de CiberHub"
+          title="YouTube"
+        >
+          ▶
+        </a>
+
+
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social"
+          aria-label="X de CiberHub"
+          title="X"
+        >
+          𝕏
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+          CiberHub
+        </div>
+
+        <p class="footer-text">
+
+          Marketplace de servicios de ciberseguridad
+          para empresas y profesionales en Panamá.
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Plataforma
+        </h4>
+
+        <a href="#inicio">
+          Inicio
+        </a>
+
+        <a href="#categorias">
+          Categorías
+        </a>
+
+        <a href="#servicios">
+          Servicios
+        </a>
+
+        <a href="#destacados">
+          Destacados
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Proveedores
+        </h4>
+
+        <a
+          href="#"
+          id="footer-provider"
         >
           Soy proveedor
-        </button>
+        </a>
 
-      </div>
-
-    </div>
-
-
-    <!-- TERMINAL ORIGINAL -->
-
-    <div class="terminal">
-
-      <div class="terminal-bar">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-      </div>
-
-      <div class="terminal-body">
-
-        <p class="line">
-          $ ciberhub verificar --pyme "Panadería Aguadulce"
-        </p>
-
-        <p class="line ok">
-          ✓ certificado_ssl ................ activo
-        </p>
-
-        <p class="line ok">
-          ✓ backup_automatico .............. configurado
-        </p>
-
-        <p
-          class="line"
-          style="color:var(--amber);"
+        <a
+          href="#"
+          id="footer-register"
         >
-          △ capacitación_phishing .......... pendiente
-        </p>
+          Registrarme
+        </a>
 
-        <p class="line ok">
-          ✓ firewall_perimetral ............ activo
-        </p>
+        <a href="#">
+          Promocionar mi negocio
+        </a>
 
-        <p class="line">
-          3 de 4 controles cumplidos<span class="caret"></span>
-        </p>
+        <a href="#">
+          Centro de ayuda
+        </a>
 
       </div>
 
     </div>
 
-  </div>
 
-</section>
+    <div class="copyright">
 
-
-<!-- =========================================
-     CATEGORÍAS
-========================================= -->
-
-<div class="cats">
-
-  <div class="cats-row">
-
-    <button
-      class="cat-btn active"
-      data-cat="todos"
-      type="button"
-      aria-label="Mostrar todos los servicios"
-      aria-pressed="true"
-    >
-      Todos
-    </button>
-
-    <button
-      class="cat-btn"
-      data-cat="auditoria"
-      type="button"
-      aria-label="Mostrar servicios de auditoría"
-      aria-pressed="false"
-    >
-      Auditoría
-    </button>
-
-    <button
-      class="cat-btn"
-      data-cat="monitoreo"
-      type="button"
-      aria-label="Mostrar servicios de monitoreo"
-      aria-pressed="false"
-    >
-      Monitoreo
-    </button>
-
-    <button
-      class="cat-btn"
-      data-cat="capacitacion"
-      type="button"
-      aria-label="Mostrar servicios de capacitación"
-      aria-pressed="false"
-    >
-      Capacitación
-    </button>
-
-    <button
-      class="cat-btn"
-      data-cat="infraestructura"
-      type="button"
-      aria-label="Mostrar servicios de infraestructura"
-      aria-pressed="false"
-    >
-      Infraestructura
-    </button>
-
-  </div>
-
-</div>
-
-
-<!-- =========================================
-     CATÁLOGO
-========================================= -->
-
-<section
-  class="section"
-  id="catalogo"
->
-
-  <div class="section-head">
-
-    <h2>
-      Catálogo de servicios
-    </h2>
-
-    <span
-      id="results-count"
-      aria-live="polite"
-    >
-      6 servicios de 4 proveedores
-    </span>
-
-  </div>
-
-
-  <!-- BUSCADOR Y ORDEN -->
-
-  <div class="toolbar">
-
-    <div class="search-box">
-
-      <svg
-        class="search-icon"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        aria-hidden="true"
-      >
-
-        <circle
-          cx="11"
-          cy="11"
-          r="7"
-        ></circle>
-
-        <line
-          x1="21"
-          y1="21"
-          x2="16.65"
-          y2="16.65"
-        ></line>
-
-      </svg>
-
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Buscar servicio (ej. phishing, backup, SSL)..."
-        aria-label="Buscar servicios por palabra clave"
-      >
+      © 2026 CiberHub.
+      Todos los derechos reservados.
 
     </div>
 
-
-    <select
-      class="sort-select"
-      id="sort-select"
-      aria-label="Ordenar servicios"
-    >
-
-      <option value="relevancia">
-        Relevancia
-      </option>
-
-      <option value="precio-asc">
-        Menor precio
-      </option>
-
-      <option value="precio-desc">
-        Mayor precio
-      </option>
-
-      <option value="calificacion">
-        Mejor calificado
-      </option>
-
-    </select>
-
-  </div>
+  </footer>
 
 
+  <!-- MODAL DE DEMO -->
   <div
-    class="grid"
-    id="grid"
-    aria-live="polite"
-  ></div>
-
-
-  <div
-    class="empty-state"
-    id="empty-state"
-    style="display:none;"
-    role="status"
+    class="demo-overlay"
+    id="demo-overlay"
+    aria-hidden="true"
   >
 
-    <strong>
-      No hay servicios en esta categoría todavía.
-    </strong>
-
-    Prueba con otra categoría o borra la búsqueda.
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     VIDEO
-========================================= -->
-
-<section
-  class="section video-section"
-  id="video"
->
-
-  <div class="section-head">
-
-    <h2>
-      Cómo funciona CiberHub
-    </h2>
-
-    <span>
-      Video explicativo
-    </span>
-
-  </div>
-
-
-  <div class="video-wrap">
-
-    <iframe
-      src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-      title="Cómo funciona CiberHub"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-
-  </div>
-
-
-  <p class="video-caption">
-    Video de 1–2 minutos mostrando el catálogo,
-    el filtro por categoría y el flujo de agregar
-    un servicio al carrito.
-  </p>
-
-</section>
-
-
-<!-- =========================================
-     CONFIANZA
-========================================= -->
-
-<section
-  class="trust"
-  id="confianza"
->
-
-  <div class="trust-row">
-
-    <div class="trust-item">
-      🛡️ Proveedores verificados manualmente
-    </div>
-
-    <div class="trust-item">
-      💳 Yappy · Tarjeta · Transferencia
-    </div>
-
-    <div class="trust-item">
-      🧾 Precios incluyen 7% ITBMS
-    </div>
-
-    <div class="trust-item">
-      📄 Contrato de servicio digital incluido
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer id="footer">
-
-  <div class="foot-row">
-
-    <div>
-      CiberHub — demo académica,
-      Trabajo Individual 3, Tienda Electrónica.
-    </div>
-
-    <div>
-      Universidad de Panamá ·
-      Centro Regional Universitario de Coclé
-    </div>
-
-  </div>
-
-</footer>
-
-
-<!-- =========================================
-     MODAL CARRITO
-========================================= -->
-
-<div
-  class="modal-overlay"
-  id="cart-overlay"
-  aria-hidden="true"
->
-
-  <div
-    class="modal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="cart-title"
-  >
-
-    <div class="modal-head">
-
-      <h3 id="cart-title">
-        Tu carrito
-      </h3>
+    <div
+      class="demo-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="demo-title"
+    >
 
       <button
-        class="modal-close"
-        id="cart-close"
+        class="demo-close"
+        id="demo-close"
         type="button"
-        aria-label="Cerrar carrito"
-        title="Cerrar carrito"
+        aria-label="Cerrar ventana"
       >
-        ✕
+        ×
       </button>
 
-    </div>
+      <div class="demo-modal-icon">
+        🔐
+      </div>
 
-    <div id="cart-body"></div>
+      <h2 id="demo-title">
+        CiberHub
+      </h2>
 
-  </div>
-
-</div>
-
-
-<!-- =========================================
-     MODAL PERFIL PROVEEDOR
-========================================= -->
-
-<div
-  class="modal-overlay center"
-  id="vendor-overlay"
-  aria-hidden="true"
->
-
-  <div
-    class="modal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="vendor-title"
-  >
-
-    <div class="modal-head">
-
-      <h3 id="vendor-title">
-        Proveedor
-      </h3>
+      <p id="demo-message">
+        Esta función estará disponible próximamente.
+      </p>
 
       <button
-        class="modal-close"
-        id="vendor-close"
+        class="primary"
+        id="demo-ok"
         type="button"
-        aria-label="Cerrar perfil de proveedor"
-        title="Cerrar perfil"
       >
-        ✕
+        Entendido
       </button>
 
     </div>
 
-    <div id="vendor-body"></div>
-
   </div>
 
-</div>
 
-
-<!-- =========================================
-     MODAL SOY PROVEEDOR
-========================================= -->
-
-<div
-  class="modal-overlay center"
-  id="provider-overlay"
-  aria-hidden="true"
->
-
-  <div
-    class="modal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="provider-title"
-  >
-
-    <div class="modal-head">
-
-      <h3 id="provider-title">
-        Únete como proveedor
-      </h3>
-
-      <button
-        class="modal-close"
-        id="provider-close"
-        type="button"
-        aria-label="Cerrar formulario de proveedor"
-        title="Cerrar formulario"
-      >
-        ✕
-      </button>
-
-    </div>
-
-
-    <form id="provider-form">
-
-
-      <div class="form-field">
-
-        <label for="pf-name">
-          Nombre del negocio
-        </label>
-
-        <input
-          type="text"
-          id="pf-name"
-          name="nombre_negocio"
-          required
-          minlength="2"
-          autocomplete="organization"
-        >
-
-      </div>
-
-
-      <div class="form-field">
-
-        <label for="pf-services">
-          Servicios que ofrece
-        </label>
-
-        <textarea
-          id="pf-services"
-          name="servicios"
-          rows="3"
-          required
-          minlength="3"
-          placeholder="Ej. auditorías, monitoreo, capacitación..."
-        ></textarea>
-
-      </div>
-
-
-      <div class="form-field">
-
-        <label for="pf-contact">
-          Correo o teléfono de contacto
-        </label>
-
-        <input
-          type="text"
-          id="pf-contact"
-          name="contacto"
-          required
-          minlength="3"
-          autocomplete="email"
-          placeholder="correo@ejemplo.com / 6000-0000"
-        >
-
-      </div>
-
-
-      <button
-        type="submit"
-        class="btn-primary"
-        style="width:100%;"
-        aria-label="Enviar solicitud para ser proveedor"
-      >
-        Enviar solicitud
-      </button>
-
-
-      <div
-        class="form-success"
-        id="pf-success"
-        style="display:none;"
-        role="status"
-        aria-live="polite"
-      >
-        ✓ Solicitud enviada. Te contactaremos pronto.
-      </div>
-
-    </form>
-
-  </div>
-
-</div>
-
-
+  <script src="js/script.js"></script>
 
 </body>
 </html>
